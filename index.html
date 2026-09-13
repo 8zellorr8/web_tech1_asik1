@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header" id="top">
+        <nav class="site-nav" aria-label="Page navigation">
+            <a class="brand-link" href="#top">Ulan</a>
+            <a href="#about-me">About</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#favorites">Links</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#mood">Mood</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="hero">
+            <div class="hero-text">
+                <p class="intro-label">AITU Software Engineering Student</p>
+                <h1>Hi, I'm Ulan</h1>
+                <p>
+                    I am a second-year Software Engineering student at Astana IT University, group SE-2520. I enjoy building the backend side of web projects and growing through hackathons, teamwork, and real practice.
+                </p>
+                <a class="hero-link" href="#about-me">Explore the page</a>
+            </div>
+            <img class="profile-photo" src="photo for web tech_ me.jpg" width="900" height="1200">
+        </div>
+    </header>
+
+    <main>
+        <section class="content-section" id="about-me">
+            <div class="section-title">
+                <p class="intro-label">Personal introduction</p>
+                <h2>About Me</h2>
+            </div>
+
+            <div class="profile-card">
+                <div>
+                    <h3>Student Profile</h3>
+                    <p>
+                        My name is Ulan, and I study Software Engineering at AITU. I am in my second year, and my group is SE-2520. I am interested in backend development because I like working with logic, data, APIs, and the hidden part of a website that makes everything function.
+                    </p>
+                    <p>
+                        My current goal is to find an internship during my second year or a full-time job connected with my education. I also take part in different hackathons, where I usually work on the backend part of the project and help the team turn an idea into a working
+                        product.
+                    </p>
+                </div>
+
+                <div class="facts-box">
+                    <p><strong>Name:</strong> Ulan</p>
+                    <p><strong>University:</strong> Astana IT University</p>
+                    <p><strong>Major:</strong> Software Engineering</p>
+                    <p><strong>Year:</strong> Second year</p>
+                    <p><strong>Group:</strong> SE-2520</p>
+                    <p><strong>Career goal:</strong> Internship or software engineering job</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section split-section">
+            <div id="hobbies">
+                <div class="section-title">
+                    <p class="intro-label">Ordered list</p>
+                    <h2>My Hobbies</h2>
+                </div>
+                <ol class="pretty-list">
+                    <li>Walking around the city with friends</li>
+                    <li>Watching movies and TV series</li>
+                    <li>Playing football</li>
+                    <li>Joining hackathons and building web projects</li>
+                    <li>Learning backend development</li>
+                </ol>
+            </div>
+
+            <div id="favorites">
+                <div class="section-title">
+                    <p class="intro-label">Unordered list</p>
+                    <h2>Favorite Websites</h2>
+                </div>
+                <ul class="pretty-list link-list">
+                    <li><a href="https://www.imdb.com/" target="_blank" rel="noopener">IMDb</a></li>
+                    <li><a href="https://www.fragrantica.com/" target="_blank" rel="noopener">Fragrantica</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section" id="schedule">
+            <div class="section-title">
+                <p class="intro-label">Data table</p>
+                <h2>Class Schedule</h2>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Day</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Web Technologies</td>
+                            <td>Monday</td>
+                            <td>13:05 - 14:50</td>
+                        </tr>
+                        <tr>
+                            <td>Russian Language 1</td>
+                            <td>Tuesday</td>
+                            <td>14:00 - 15:50</td>
+                        </tr>
+                        <tr>
+                            <td>Operating Systems</td>
+                            <td>Wednesday</td>
+                            <td>15:00 - 17:50</td>
+                        </tr>
+                        <tr>
+                            <td>Software Design Pattern</td>
+                            <td>Thursday</td>
+                            <td>14:00 - 15:50</td>
+                        </tr>
+                        <tr>
+                            <td>Design and Analysis of Algorithms</td>
+                            <td>Friday</td>
+                            <td>18:00 - 19:50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="content-section mood-section" id="mood">
+            <div class="section-title">
+                <p class="intro-label">Mood paragraph</p>
+                <h2>My Mood Today</h2>
+            </div>
+            <p>
+                Today I feel motivated, curious, and ready to improve my skills 😊 💻 ⚽. Every small step in web development brings me closer to my internship goal and future software engineering career.
+            </p>
+            <button class="click-button" type="button">Click Me</button>
+        </section>
+
+        <section class="content-section" id="contact">
+            <div class="section-title">
+                <p class="intro-label">Basic form</p>
+                <h2>Contact Form</h2>
+            </div>
+
+            <form class="contact-form" action="#" method="get">
+                <div class="form-row">
+                    <label for="visitor-name">Name</label>
+                    <input id="visitor-name" name="visitor-name" type="text" placeholder="Your name">
+                </div>
+
+                <div class="form-row">
+                    <label for="visitor-email">Email</label>
+                    <input id="visitor-email" name="visitor-email" type="email" placeholder="name@example.com">
+                </div>
+
+                <div class="form-row">
+                    <label for="favorite-color">Favorite Color</label>
+                    <input id="favorite-color" name="favorite-color" type="color" value="#0e4c61">
+                </div>
+
+                <button class="submit-button" type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Ulan, SE-2520. Built with semantic HTML and an external CSS stylesheet.</p>
+    </footer>
+</body>
+
+</html>
