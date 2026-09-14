@@ -1,5 +1,4 @@
 :root {
-    color-scheme: light;
     --page-bg: #eef5f2;
     --paper: #fbfcf7;
     --paper-soft: #e8f3f4;
@@ -9,9 +8,6 @@
     --primary: #176b87;
     --primary-dark: #0e4c61;
     --coral: #d85c4a;
-    --gold: #c9912d;
-    --green: #48745d;
-    --shadow: 0 18px 42px rgba(23, 33, 41, 0.14);
     --radius: 8px;
 }
 
@@ -27,10 +23,10 @@ body {
     margin: 0;
     min-height: 100vh;
     color: var(--ink);
-    background: linear-gradient(135deg, rgba(23, 107, 135, 0.13), transparent 34%), linear-gradient(315deg, rgba(216, 92, 74, 0.16), transparent 40%), var(--page-bg);
+    background: var(--page-bg);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
-    line-height: 1.65;
+    line-height: 1.6;
 }
 
 p {
@@ -49,34 +45,23 @@ a:hover {
     text-decoration: underline;
 }
 
-a:focus-visible,
-button:focus-visible,
-input:focus-visible {
-    outline: 3px solid rgba(23, 107, 135, 0.36);
-    outline-offset: 3px;
-}
-
 h1,
 h2,
 h3 {
     margin: 0;
-    line-height: 1.15;
     color: var(--ink);
 }
 
 h1 {
-    max-width: 680px;
     font-size: 5.2rem;
-    font-weight: 900;
 }
 
 h2 {
     font-size: 2.5rem;
-    font-weight: 850;
 }
 
 h3 {
-    font-size: 1.22rem;
+    font-size: 1.2rem;
 }
 
 .site-header {
@@ -89,43 +74,31 @@ h3 {
 .site-nav {
     width: min(1120px, 100%);
     margin: 0 auto;
-    min-height: 60px;
     padding: 10px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 8px;
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    background: rgba(255, 253, 248, 0.82);
-    box-shadow: 0 10px 30px rgba(23, 33, 41, 0.08);
+    background: #fffdf8;
 }
 
 .site-nav a {
-    min-height: 40px;
     padding: 8px 14px;
-    display: inline-flex;
-    align-items: center;
     border-radius: var(--radius);
     color: var(--ink);
-    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .site-nav a:hover {
-    color: #ffffff;
+    color: white;
     background: var(--primary);
     text-decoration: none;
-    transform: translateY(-1px);
 }
 
 .site-nav .brand-link {
-    color: #ffffff;
+    color: white;
     background: var(--ink);
-    font-weight: 900;
-}
-
-.site-nav .brand-link:hover {
-    background: var(--coral);
 }
 
 .hero {
@@ -133,7 +106,7 @@ h3 {
     margin: auto;
     padding: 52px 0 18px;
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 44px;
     align-items: center;
 }
@@ -143,16 +116,10 @@ h3 {
     gap: 20px;
 }
 
-.hero-text p:not(.intro-label) {
-    max-width: 650px;
-    font-size: 1.16rem;
-}
-
 .intro-label {
     color: var(--coral);
     font-size: 0.8rem;
     font-weight: 900;
-    letter-spacing: 0;
     text-transform: uppercase;
 }
 
@@ -160,46 +127,33 @@ h3 {
 .submit-button,
 .click-button {
     width: max-content;
-    min-height: 44px;
     padding: 10px 16px;
     border: 0;
     border-radius: var(--radius);
-    color: #ffffff;
+    color: white;
     background: var(--primary);
     font-weight: 800;
-    box-shadow: 0 12px 24px rgba(23, 107, 135, 0.24);
-    transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
 }
 
 .hero-link:hover,
 .submit-button:hover,
 .click-button:hover {
-    color: #ffffff;
     background: var(--primary-dark);
+    color: white;
     text-decoration: none;
-    transform: translateY(-2px);
-    box-shadow: 0 16px 30px rgba(14, 76, 97, 0.28);
 }
 
 .profile-photo {
     width: min(100%, 390px);
-    height: min(72vh, 540px);
-    aspect-ratio: 3 / 4;
+    height: 540px;
     justify-self: end;
     object-fit: cover;
-    object-position: 50% 38%;
     border: 10px solid var(--paper);
     border-radius: var(--radius);
-    box-shadow: var(--shadow);
 }
 
 main {
     background: var(--paper);
-    border-top: 1px solid var(--line);
-}
-
-#about-me {
-    scroll-margin-top: 24px;
 }
 
 .content-section {
@@ -209,86 +163,53 @@ main {
     border-bottom: 1px solid var(--line);
 }
 
-.content-section:last-child {
-    border-bottom: 0;
-}
-
 .section-title {
     margin-bottom: 26px;
 }
 
 .profile-card {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+    grid-template-columns: 1.2fr 0.8fr;
     gap: 26px;
-    align-items: start;
 }
 
 .profile-card>div {
-    min-height: 210px;
     padding: 24px;
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    background: #ffffff;
+    background: white;
 }
 
 .profile-card h3 {
     margin-bottom: 12px;
 }
 
-.profile-card p+p {
-    margin-top: 14px;
-}
-
 .facts-box {
-    background: var(--paper-soft);
-}
-
-.facts-box p+p {
-    margin-top: 12px;
+    background: var(--paper-soft) !important;
 }
 
 .split-section {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 48px;
 }
 
 .pretty-list {
-    min-height: 240px;
     margin: 0;
     padding: 26px 26px 26px 48px;
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    background: #ffffff;
-}
-
-.pretty-list li+li {
-    margin-top: 12px;
-}
-
-.pretty-list li::marker {
-    color: var(--coral);
-    font-weight: 900;
-}
-
-.link-list a {
-    display: inline-block;
-    padding: 2px 0;
+    background: white;
 }
 
 .table-wrap {
     overflow-x: auto;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    box-shadow: 0 14px 32px rgba(23, 33, 41, 0.08);
 }
 
 table {
     width: 100%;
-    min-width: 620px;
     border-collapse: collapse;
-    background: #ffffff;
+    background: white;
 }
 
 th,
@@ -299,43 +220,21 @@ td {
 }
 
 th {
-    color: #ffffff;
+    color: white;
     background: var(--primary-dark);
-    font-size: 0.92rem;
-    text-transform: uppercase;
 }
 
 tbody tr:nth-child(even) {
     background: #f8fbfb;
 }
 
-tbody tr:last-child td {
-    border-bottom: 0;
-}
-
 .mood-section {
-    min-height: 300px;
     display: grid;
-    align-content: center;
     gap: 22px;
     padding: 64px 34px;
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    background: linear-gradient(120deg, rgba(23, 107, 135, 0.12), transparent), linear-gradient(300deg, rgba(201, 145, 45, 0.20), transparent), #fff8ed;
-}
-
-.mood-section p {
-    max-width: 820px;
-    color: #3e4b54;
-    font-size: 1.18rem;
-}
-
-.click-button {
-    background: var(--coral);
-}
-
-.click-button:hover {
-    background: #b84234;
+    background: #fff8ed;
 }
 
 .contact-form {
@@ -345,8 +244,7 @@ tbody tr:last-child td {
     gap: 18px;
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    background: #ffffff;
-    box-shadow: 0 14px 34px rgba(23, 33, 41, 0.09);
+    background: white;
 }
 
 .form-row {
@@ -361,7 +259,6 @@ label {
 
 input {
     width: 100%;
-    min-height: 46px;
     padding: 10px 12px;
     border: 1px solid #cab9aa;
     border-radius: var(--radius);
@@ -372,11 +269,6 @@ input {
 input[type="color"] {
     width: 96px;
     height: 48px;
-    padding: 4px;
-}
-
-.submit-button {
-    margin-top: 4px;
 }
 
 .site-footer {
@@ -386,13 +278,10 @@ input[type="color"] {
 }
 
 .site-footer p {
-    color: #f4efe6;
+    color: white;
 }
 
 @media (max-width: 820px) {
-    body {
-        font-size: 16px;
-    }
     .site-header {
         min-height: auto;
         padding: 16px;
@@ -401,28 +290,15 @@ input[type="color"] {
         justify-content: flex-start;
         overflow-x: auto;
     }
-    .site-nav a {
-        flex: 0 0 auto;
-    }
     .hero,
     .profile-card,
     .split-section {
         grid-template-columns: 1fr;
     }
-    .hero {
-        gap: 28px;
-        padding-top: 42px;
-    }
     .profile-photo {
         justify-self: start;
         width: min(100%, 360px);
         height: 480px;
-    }
-    .content-section {
-        padding: 52px 0;
-    }
-    .mood-section {
-        padding: 44px 22px;
     }
     h1 {
         font-size: 3.3rem;
@@ -436,9 +312,6 @@ input[type="color"] {
     h1 {
         font-size: 2.7rem;
     }
-    .site-nav {
-        padding: 8px;
-    }
     .site-nav a {
         padding: 8px 11px;
     }
@@ -446,8 +319,5 @@ input[type="color"] {
     .pretty-list,
     .contact-form {
         padding: 20px;
-    }
-    .pretty-list {
-        padding-left: 38px;
     }
 }
